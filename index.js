@@ -9,3 +9,13 @@ document.getElementsByClassName("h3")[0]
 
 //✅ getElementById("id") → Returns a single element (HTMLElement). //ID's are unique
 //✅ getElementsByClassName("class") → Returns an HTMLCollection (like an array) of all matching elements.
+
+const querySelectorAll = document.querySelectorAll(".h3");
+console.log(querySelectorAll);
+
+
+// Key Differences:
+// querySelector is used for selecting the first match, while querySelectorAll selects all matches.
+// querySelectorAll returns a NodeList (which can be looped over), whereas querySelector returns a single element.
+//Parameters Accepted by querySelector():
+//CSS Selector: It can be any valid CSS selector, such as class, ID, tag, attribute, or pseudo-classes.
