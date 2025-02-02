@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- declares the document type as HTML5, ensuring the browser renders the page in standards-compliant mode. -->
+<!--HTML5 introduces modern features, better semantics, multimedia support, and cross-platform compatibility
+for building robust web applications.-->
+<html>
+
+<head>
+    <script src="index.js" defer></script>
+    <!-- When you place the <script> tag in the <head> section, the script executes before the HTML elements 
+        are fully loaded, so it cannot find or modify elements like <h1> because they don't exist in the DOM yet. -->
+    <!-- The defer attribute in a <script> tag delays script execution until the HTML document is fully parsed,
+        ensuring scripts run after the DOM is loaded. -->
+    <!-- Defer ensurs scripts run after the DOM is loaded. -->
+</head>
+
+<body>
+    <h1 id="h1">Hello</h1>
+</body>
+
+</html>
