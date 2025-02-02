@@ -69,3 +69,10 @@ function display({ userName, userAge }) {
 }
 const userPerson = { userName: "Sarah", userAge: 27 };
 display(userPerson); // Output: Name: Sarah, Age: 27
+
+//11//💡 Question: How can you use destructuring with a function that returns an array?
+function getCoordinates() {
+    return [50, 100];
+}
+const [x, y] = getCoordinates();
+console.log(x, y); // Output: 50 100
