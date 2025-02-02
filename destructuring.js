@@ -57,3 +57,15 @@ let a = 5, b = 10;
 [a, b] = [b, a];
 console.log(a, b); // Output: 10 5
 
+//9//💡 Question: How can you collect the remaining properties using rest syntax?
+const userProfile = { username: "Mike", age: 28, city: "NY" };
+const { username, ...otherDetails } = userProfile;
+console.log(username); // Output: Mike
+console.log(otherDetails); // Output: { age: 28, city: "NY" }
+
+//10//💡 Question: How can you destructure function parameters?
+function display({ userName, userAge }) {
+    console.log(`Name: ${userName}, Age: ${userAge}`);
+}
+const userPerson = { userName: "Sarah", userAge: 27 };
+display(userPerson); // Output: Name: Sarah, Age: 27
