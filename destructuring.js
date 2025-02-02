@@ -69,7 +69,7 @@ let a = 5, b = 10;
 console.log(a, b); // Output: 10 5
 //How It Works Internally?
 //[b, a] creates a temporary array [10, 5], but it is not stored in a separate variable.
-//avaScript destructures the array and assigns:
+//JavaScript destructures the array and assigns:
 //a = 10
 //b = 5
 //The temporary array is garbage collected immediately after assignment, avoiding extra memory allocation.
