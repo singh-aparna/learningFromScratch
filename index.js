@@ -12,6 +12,9 @@ document.getElementsByClassName("h3")[0]
 
 const querySelectorAll = document.querySelectorAll(".h3");
 console.log(querySelectorAll);
+querySelectorAll.forEach(el => {
+    el.style.color = "blue";
+})
 
 
 // Key Differences:
@@ -19,3 +22,11 @@ console.log(querySelectorAll);
 // querySelectorAll returns a NodeList (which can be looped over), whereas querySelector returns a single element.
 //Parameters Accepted by querySelector():
 //CSS Selector: It can be any valid CSS selector, such as class, ID, tag, attribute, or pseudo-classes.
+//A NodeList is a collection of DOM nodes (elements)
+//NodeList//Array-like: It has an indexed collection of elements.
+
+
+//Converting a NodeList to an Array:
+const querySelectorAllArray = Array.from(querySelectorAll);  // Convert NodeList to Array
+querySelectorAllArray.map(el => console.log(el));    // Now you can use array methods like .map()
+
