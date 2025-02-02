@@ -47,4 +47,13 @@ const { fullName: name2, country: locationName } = user;
 //since it's a reserved global property (window.location).
 console.log(name2, locationName); // Output: Emma USA
 
-//7//
+//7//💡 Question: How do you extract values from a nested object?
+const student = { nameee: "John", details: { agee: 20, grade: "A" } };
+const { nameee, details: { agee, grade } } = student;
+console.log(nameee, agee, grade); // Output: John 20 A
+
+//8//💡 Question: How can you swap two variables using destructuring?
+let a = 5, b = 10;
+[a, b] = [b, a];
+console.log(a, b); // Output: 10 5
+
