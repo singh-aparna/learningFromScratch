@@ -4,5 +4,8 @@ document.getElementById("h1")//Fetches the DOM element with the ID h1.
 document.getElementById("h2")//Fetches the DOM element with the ID h1.
     .innerHTML = "Learn from scratch!!";//Sets the text content+h1 element of that element to "Hi".
 
-document.getElementsByClassName("h3")
+document.getElementsByClassName("h3")[0]
     .textContent = "Learn Javascript!";
+
+//✅ getElementById("id") → Returns a single element (HTMLElement). //ID's are unique
+//✅ getElementsByClassName("class") → Returns an HTMLCollection (like an array) of all matching elements.
