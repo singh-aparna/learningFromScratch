@@ -1,0 +1,19 @@
+Design a REST API - JSON  
+
+
+GET /users - HTML document render
+GET /api/users - List all users JSON
+GET /users/1 - List of individual user (Get the user with ID 1)
+GET /users/2 - List of individual user (Get the user with ID 2)
+
+Dynamic Path Parameters
+GET /api/users/:id 
+:id -> variable | Dynamic
+
+POST /users - Create new user
+
+PATCH /users/id - Edit the user with ID 1
+
+DELETE /users/id - Delete the user with ID 1
+
+
