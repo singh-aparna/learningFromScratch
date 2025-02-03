@@ -30,3 +30,6 @@ querySelectorAll.forEach(el => {
 const querySelectorAllArray = Array.from(querySelectorAll);  // Convert NodeList to Array
 querySelectorAllArray.map(el => console.log(el));    // Now you can use array methods like .map()
 
+
+
+

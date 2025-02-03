@@ -9,7 +9,7 @@ for building robust web applications.-->
     </link>
     <script src="index.js" defer></script>
     <!-- <script src="destructuring.js" defer></script> -->
-    <script src="forLoop.js" defer></script>
+    <!-- <script src="forLoop.js" defer></script> -->
     <!-- When you place the <script> tag in the <head> section, the script executes before the HTML elements 
         are fully loaded, so it cannot find or modify elements like <h1> because they don't exist in the DOM yet. -->
     <!-- The defer attribute in a <script> tag delays script execution until the HTML document is fully parsed,
@@ -18,33 +18,146 @@ for building robust web applications.-->
 </head>
 
 <body>
-    <main>
+    <main class="container">
         <!-- <h1 id="h1">Hello, world!</h1>
         <h2 id="h2">Hello, world!</h2>
         <h2 class="h3">Hello, world!</h2>
         <h2 class="h3">Hello, world!</h2> -->
-        <h1>Basics</h1>
-        <h2>1.What is 'fs'?</h2>
-        <p>'fs' is a node js built-in module for handlling file system operations. </p>
+        <ol class="items">
+            <li>
+                <h2>What is 'fs'?</h2>
+                <p>'fs' is a node js built-in module for handlling file system operations. </p>
+            </li>
 
-        <h2>1.What is 'ajax'?</h2>
-        <p>'ajax' (Asynchronous Javascript and XML) It's a technique or a way for sending and receiving data from a
-            server asynchronously w/o reloading the page. </p>
+            <li>
+                <h2>What is 'ajax'?</h2>
+                <p>'ajax' (Asynchronous Javascript and XML) It's a technique or a way for sending and receiving data
+                    from a
+                    server asynchronously w/o reloading the page. </p>
+            </li>
 
-        <h2>1.What is 'API'?</h2>
-        <p>API (Application Programming Interface) is a set of rules that allows different software
-            applications to communicate with each other. </p>
-        <ul>
-            <li>example github user's api</li>
-            <li>What it does:</li>
-            <li>Sends a request to GitHub's API to get details of the user "octocat".</li>
-            <li>Returns data like username, profile image, bio, and more in JSON format.</li>
-            <li>How API Enables Communication:</li>
-            <li>The food app (client) sends a request to Google Maps API (server).</li>
-            <li>Google Maps API processes the request and returns a response with location data.</li>
-            <li>The food app uses this response to show real-time restaurant locations.</li>
-        </ul>
+            <li>
+                <h2>What is 'API'?</h2>
+                <p>API (Application Programming Interface) is a set of rules that allows different software
+                    applications to communicate with each other. </p>
+                • example github user's api<br/>
+                • What it does:<br/>
+                • Sends a request to GitHub's API to get details of the user "octocat".<br/>
+                • Returns data like username, profile image, bio, and more in JSON format.<br/>
+                • How API Enables Communication:<br/>
+                • The food app (client) sends a request to Google Maps API (server).<br/>
+                • Google Maps API processes the request and returns a response with location data.<br/>
+                • The food app uses this response to show real-time restaurant locations.
+            </li>
+
+            <li>
+                <h2>Difference b/w res.json() & res.send().</h2>
+                <p>res.json() automatically sets the Content-Type to application/json and converts the response to JSON,
+                    while res.send() can send any type of response (string, object, buffer, etc.). </p>
+            </li>
+
+            <li>
+                <h2>Difference b/w req.body & req.params.</h2>
+                <p>req.body contains data sent in the request body (used in POST or PUT),
+                    while req.params holds route parameters from the URL (e.g., /user/:id). </p>
+            </li>
+
+            <li>
+                <h2>What is Nodejs?</h2>
+                <p>Nodejs is a runtime environment that allows you to run JavaScript on the server-side using the v8
+                    engine.
+                </p>
+            </li>
+
+            <li>
+                <h2>What is runtime environment?</h2>
+                <p>A runtime environment provides the necessary tools,
+                    libraries, and execution context for running code outside its original development environment. </p>
+            </li>
+
+            <li>
+                <h2>What is V8 engine?</h2>
+                <p>The V8 engine is Google's high-performance JavaScript engine that compiles JavaScript into machine
+                    code
+                    for
+                    faster execution. </p>
+            </li>
+
+            <li>
+                <h2>How does Nodejs works?</h2>
+                <p>Node.js works by using the V8 engine to execute JavaScript code,
+                    along with an event-driven,
+                    non-blocking I/O model
+                    to handle multiple requests efficiently.</p>
+            </li>
+
+            <li>
+                <h2>What is event driven & non blocking I/O model?</h2>
+                <p>The event-driven, non-blocking I/O model in Node.js allows it to handle multiple requests
+                    asynchronously
+                    using callbacks,
+                    Promises, or async/await,
+                    without waiting for one task to complete before starting another.</p>
+            </li>
+
+            <li>
+                <h2>How does Node.js handle asynchronous operations?</h2>
+                <p>Node.js handles asynchronous operations using an event loop,
+                    callbacks, Promises,
+                    and async/await,
+                    enabling non-blocking execution for efficient performance. </p>
+            </li>
+
+            <li>
+                <h2>What is Express .js?</h2>
+                <p>Express.js isa Node js framework for building api and web servers.<br/>
+                    example - <br/>
+                    • creating basic server // const express = require('express'), app = express(); app.get('/', (req, res) => res.send('Hello World')); app.listen(3000);<br/>
+                    • serving JSON // app.get('/api', (req, res) => res.json({ message: 'API response' }));<br/>
+                    • Route with parameters // app.get('/user/:id', (req, res) => res.send(`User ID: ${req.params.id}`)); </p>
+            </li>
+
+
+
+
+        </ol>
+
+        <div class="pagination">
+            <button onclick="prevPage()">Previous</button>
+            <span id="page-number">Page 1</span>
+            <button onclick="nextPage()">Next</button>
+        </div>
     </main>
+
+    <script>
+        //Pagination starts here//
+        let currentPage = 1;
+        const itemsPerPage = 5; // Show 10 items per page
+        const items = document.querySelectorAll('.items li');
+        const itemsArray = Array.from(items);
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        function showPage(page) {
+            itemsArray.forEach((item, index) => {
+                item.style.display = (index >= (page - 1) * itemsPerPage && index < page * itemsPerPage) ? "block" : "none";
+            });
+            document.getElementById("page-number").innerText = `Page${page}`;
+        }
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+        showPage(currentPage);
+        //Pagination ends here//
+    </script>
 
 </body>
 
