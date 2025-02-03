@@ -1,6 +1,6 @@
 for (var i = 0; i <= 4; i++) {
-    setTimeout((j = i) => {
-        console.log(j)
+    setTimeout(() => {
+        console.log(i)
     }, 1000)
 }
 //output: 5 5 5 5 5
@@ -8,8 +8,8 @@ for (var i = 0; i <= 4; i++) {
 
 
 for (let i = 0; i <= 4; i++) {
-    setTimeout((j = i) => {
-        console.log(j)
+    setTimeout(() => {
+        console.log(i)
     }, 1000)
 }
 //output:  0 1 2 3 4 
