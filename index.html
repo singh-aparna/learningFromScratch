@@ -25,28 +25,28 @@ for building robust web applications.-->
         <h2 class="h3">Hello, world!</h2> -->
         <ol class="items">
             <li>
-                <h2>What is 'fs'?</h2>
-                <p>'fs' is a node js built-in module for handlling file system operations. </p>
+                <h2>What is 'fs'? (asked in interview)</h2>
+                <p>'fs' is a node.js built-in module for handlling file system operations. </p>
             </li>
 
             <li>
                 <h2>What is 'ajax'?</h2>
-                <p>'ajax' (Asynchronous Javascript and XML) It's a technique or a way for sending and receiving data
-                    from a
-                    server asynchronously w/o reloading the page. </p>
+                <p>'ajax' (Asynchronous Javascript and XML) It's a technique or a way for web-page for sending and
+                    receiving data
+                    from a server asynchronously w/o reloading the page. </p>
             </li>
 
             <li>
-                <h2>What is 'API'?</h2>
+                <h2>What is 'API'? (asked in interview)</h2>
                 <p>API (Application Programming Interface) is a set of rules that allows different software
                     applications to communicate with each other. </p>
-                • example github user's api<br/>
-                • What it does:<br/>
-                • Sends a request to GitHub's API to get details of the user "octocat".<br/>
-                • Returns data like username, profile image, bio, and more in JSON format.<br/>
-                • How API Enables Communication:<br/>
-                • The food app (client) sends a request to Google Maps API (server).<br/>
-                • Google Maps API processes the request and returns a response with location data.<br/>
+                • example github user's api<br />
+                • What it does:<br />
+                • Sends a request to GitHub's API to get details of the user "octocat".<br />
+                • Returns data like username, profile image, bio, and more in JSON format.<br />
+                • How API Enables Communication:<br />
+                • The food app (client) sends a request to Google Maps API (server).<br />
+                • Google Maps API processes the request and returns a response with location data.<br />
                 • The food app uses this response to show real-time restaurant locations.
             </li>
 
@@ -57,14 +57,14 @@ for building robust web applications.-->
             </li>
 
             <li>
-                <h2>Difference b/w req.body & req.params.</h2>
+                <h2>Difference b/w req.body & req.params. (asked in interview)</h2>
                 <p>req.body contains data sent in the request body (used in POST or PUT),
                     while req.params holds route parameters from the URL (e.g., /user/:id). </p>
             </li>
 
             <li>
-                <h2>What is Nodejs?</h2>
-                <p>Nodejs is a runtime environment that allows you to run JavaScript on the server-side using the v8
+                <h2>What is Node.js? (asked in interview)</h2>
+                <p>Node.js is a runtime environment that allows you to run JavaScript on the server-side using the v8
                     engine.
                 </p>
             </li>
@@ -84,7 +84,7 @@ for building robust web applications.-->
             </li>
 
             <li>
-                <h2>How does Nodejs works?</h2>
+                <h2>How does Nodejs works? (asked in interview)</h2>
                 <p>Node.js works by using the V8 engine to execute JavaScript code,
                     along with an event-driven,
                     non-blocking I/O model
@@ -109,12 +109,138 @@ for building robust web applications.-->
             </li>
 
             <li>
-                <h2>What is Express .js?</h2>
-                <p>Express.js isa Node js framework for building api and web servers.<br/>
-                    example - <br/>
-                    • creating basic server // const express = require('express'), app = express(); app.get('/', (req, res) => res.send('Hello World')); app.listen(3000);<br/>
-                    • serving JSON // app.get('/api', (req, res) => res.json({ message: 'API response' }));<br/>
-                    • Route with parameters // app.get('/user/:id', (req, res) => res.send(`User ID: ${req.params.id}`)); </p>
+                <h2>What is Express.js? (asked in interview)</h2>
+                <p>Express.js is a Node.js framework for building api and web servers.<br />
+                    example - <br />
+                    • creating basic server // const express = require('express'), app = express(); app.get('/', (req,
+                    res) => res.send('Hello World')); app.listen(3000);<br />
+                    • serving JSON // app.get('/api', (req, res) => res.json({ message: 'API response' }));<br />
+                    • Route with parameters // app.get('/user/:id', (req, res) => res.send(`User ID:
+                    ${req.params.id}`)); </p>
+            </li>
+
+            <li>
+                <h2>How does jwt token works? (asked in interview)</h2>
+                <p>Summary in Simple Terms<br />
+                    The server creates a token, signs it with a secret key, and gives it to the client.<br />
+                    The client sends the token back with each request.<br />
+                    The server verifies the token to ensure it’s valid and processes the request.<br />
+                    It’s like an ID card: the client shows it to prove who they are, and the server checks its
+                    authenticity!</p>
+            </li>
+
+            <li>
+                <h2>useEffect Dependency (asked in interview)</h2>
+                <p>No dependency (useEffect(callback)) → Runs after every render.<br />
+                    Empty array (useEffect(callback, [])) → Runs only once after the initial render, similar to
+                    componentDidMount in class components.<br />
+                    With dependencies (useEffect(callback, [dep1, dep2])) → Runs after the initial render and whenever
+                    any dependency changes.</p>
+            </li>
+
+            <li>
+                <h2>What next() does in a middleware? (asked in interview)</h2>
+                <p>In middleware, next is a function that passes control to the next middleware in the stack; if not
+                    called, the request will hang.</p>
+            </li>
+
+            <li>
+                <h2>How does JWT authentication work in Node.js?</h2>
+                <p>JWT authentication in Node.js works by generating a token with user data,
+                    signing it with a secret, and then using that token to authenticate subsequent requests without
+                    storing session data. 🚀
+                </p>
+            </li>
+
+            <li>
+                <h2>What is CORS, and how do you enable it in Node.js?</h2>
+                <p>CORS (Cross-Origin Resource Sharing) allows or restricts web applications from making requests to
+                    domains outside their own,
+                    and it can be enabled in Node.js using the cors middleware. 🚀</p>
+            </li>
+
+
+            <li>
+                <h2>useMemo hook (asked in interview)</h2>
+                <p>useMemo is a React hook that memoizes the result of a function,
+                    preventing unnecessary recalculations and improving performance by only recomputing when
+                    dependencies change. 🚀</p>
+            </li>
+
+
+            <li>
+                <h2>What is TypeScript?</h2>
+                <p>
+                    TypeScript is a superset of JavaScript that adds static typing and other features to enhance
+                    development and code quality.<br />
+                    - Key Points:<br />
+                    <b>Static Typing</b>: In TypeScript, you can declare the data types of variables and function
+                    parameters
+                    (string, number, etc.).<br />
+                    <b>Type Safety</b>: It helps catch errors at compile time instead of runtime, making your code more
+                    reliable.
+                </p>
+            </li>
+
+            <li>
+                <h2>What is the difference between synchronous and asynchronous code in Node.js?</h2>
+                <p>Synchronous code in Node.js executes tasks sequentially, blocking the next task until the current one
+                    finishes,
+                    while asynchronous code allows tasks to execute non-blocking and in parallel, improving performance.
+                </p>
+            </li>
+
+
+            <li>
+                <h2>Explain the concept of middleware in Express.js.</h2>
+                <p>Middleware is software that acts as a bridge,
+                    processing requests and responses between the client and server or between different application
+                    layers.
+                </p>
+            </li>
+
+            <li>
+                <h2>How do you handle errors in Node.js?</h2>
+                <p>Errors in Node.js are handled using try...catch (for synchronous code),
+                    .catch() (for Promises), and error-first callbacks or process.on('uncaughtException') for global
+                    errors. </p>
+            </li>
+
+            <li>
+                <h2>What is the difference between CommonJS and ES modules?</h2>
+                <p>CommonJS (require/module.exports) is used in Node.js for synchronous module loading,
+                    while ES Modules (import/export) support asynchronous loading and are the modern JavaScript
+                    standard.</p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
             </li>
 
 
@@ -129,7 +255,7 @@ for building robust web applications.-->
         </div>
     </main>
 
-    <script>
+    <!-- <script>
         //Pagination starts here//
         let currentPage = 1;
         const itemsPerPage = 5; // Show 10 items per page
@@ -157,7 +283,7 @@ for building robust web applications.-->
         }
         showPage(currentPage);
         //Pagination ends here//
-    </script>
+    </script> -->
 
 </body>
 

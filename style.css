@@ -6,7 +6,7 @@ body {
 
 main {
     max-width: 800px;
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0 auto;
     background-color: #f0f0f0;
     padding: 8px;
