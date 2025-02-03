@@ -1,0 +1,14 @@
+body {
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+
+h2 {
+    background-color: #ccc;
+}
