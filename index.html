@@ -322,6 +322,52 @@ for building robust web applications.-->
             </li>
 
             <li>
+                <h2>app.use(express.json()) vs app.use(express.urlencoded({ extended: false }))</h2>
+                <p>
+                    <b>app.use(express.json())</b><br />
+                    Parses incoming JSON requests.<br />
+                    Required for handling Content-Type: application/json in POST/PUT requests.<br />
+
+                    <b>app.use(express.urlencoded({ extended: false }))</b>
+                    Parses application/x-www-form-urlencoded data (like form submissions).<br />
+                    If extended: false, it only supports simple key-value pairs.<br />
+                    If extended: true, it allows nested objects.
+                </p>
+            </li>
+
+            <li>
+                <h2>CSR vs SSR</h2>
+                <p>CSR - Client Side Rendering - React - slow //Server will provide raw data and client will process
+                    that accordingly to screen sizes<br />
+                    SSR - Server Side Rendering (Fast) - Google/Youtube //server will render itself html document</p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
                 <h2></h2>
                 <p></p>
             </li>
@@ -332,7 +378,25 @@ for building robust web applications.-->
             </li>
 
 
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
 
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
 
         </ol>
 
@@ -343,10 +407,10 @@ for building robust web applications.-->
         </div>
     </main>
 
-    <!-- <script>
+    <script>
         //Pagination starts here//
         let currentPage = 1;
-        const itemsPerPage = 5; // Show 10 items per page
+        const itemsPerPage = 10; // Show 10 items per page
         const items = document.querySelectorAll('.items li');
         const itemsArray = Array.from(items);
         const totalPages = Math.ceil(items.length / itemsPerPage);
@@ -371,7 +435,7 @@ for building robust web applications.-->
         }
         showPage(currentPage);
         //Pagination ends here//
-    </script> -->
+    </script>
 
 </body>
 
