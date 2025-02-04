@@ -1,7 +1,14 @@
 const express = require('express');
 const users = require('./MOCK_DATA.json');
+const fs = require('fs');
 //CommonJS (require/module.exports) is used in Node.js for synchronous module loading
 const app = express();
+app.use(express.urlencoded({ extended: false }));
+//This middleware parses incoming URL - encoded form data(e.g.,
+//from an HTML form with application/x-www-form-urlencoded content type) and makes it available in req.body.
+// When to use false vs. true?
+// Use false (default) if you expect simple key-value pairs in forms.
+// Use true if you need to handle complex/nested data (e.g., objects, arrays).
 app.get('/', (req, res) => {
     //res.send("It's working!");
     res.json({ message: "index.js is working!" })
@@ -28,6 +35,18 @@ app.get('/api/users/:id', (req, res) => {
 
 // PUT: Full update — Replace the entire resource.
 // PATCH: Partial update — Modify only specified fields.
+app.post('/api/users', (req, res) => {
+    const body = req.body;
+    //console.log('Body', body);
+    users.push({ ...body, id: users.length + 1 });
+    fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
+        return res.send({ status: "Success", id: users.length });
+    });
+
+})
+
+app.patch('/api/users/:id', (req, res) => {
+})
 
 
 

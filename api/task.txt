@@ -17,3 +17,13 @@ PATCH /users/id - Edit the user with ID 1
 DELETE /users/id - Delete the user with ID 1
 
 
+Restful API standards & good practices to follow: https://www.youtube.com/watch?v=cJAyEOZQUQY
+
+1.Server client architecture - NO dependency
+
+CSR - Client Side Rendering - React - slow //Server will provide raw data and client will process that accordingly to screen sizes
+SSR - Server Side Rendering (Fast) - Google/Youtube //server will render itself html document
+
+2. Always repect http methods 
+
+
