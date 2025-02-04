@@ -9,6 +9,14 @@ app.use(express.urlencoded({ extended: false }));
 // When to use false vs. true?
 // Use false (default) if you expect simple key-value pairs in forms.
 // Use true if you need to handle complex/nested data (e.g., objects, arrays).
+
+//custom middleware
+app.use((req, res, next) => {
+    fs.appendFile('log.txt', `\n${Date.now()}: ${req.method}: ${req.path}`, (err, data) => {
+        next();
+    })
+})
+
 app.get('/', (req, res) => {
     //res.send("It's working!");
     res.json({ message: "index.js is working!" })
@@ -50,9 +58,25 @@ app.post('/api/users', (req, res) => {
     });
 })
 
+
+
+
 app.patch('/api/users/:id', (req, res) => {
+    return res.json({ status: "Pending" });
 })
 
+app.delete('/api/users/:id', (req, res) => {
+    const id = Number(req.params.id);
+    fs.readFile('./MOCK_DATA.json', users, (err) => {
+        if (err) console.log(err);
+    })
+    const user = users.filter(user => user.id === id);
+    console.log(user);
+
+    fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
+        return res.json({ status: "success" });
+    })
+})
 
 
 
