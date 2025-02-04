@@ -39,10 +39,15 @@ app.post('/api/users', (req, res) => {
     const body = req.body;
     //console.log('Body', body);
     users.push({ ...body, id: users.length + 1 });
-    fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
+    fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {//fs module will make sure new users are saved to a file
+        //save the updated users' list to a JSON file.
+        //If you only push the new user into the users array, the change will exist only while the server is running.
+        //If the server restarts, all new users will be lost because users is just a temporary in-memory array.
+        //Files store data as text, not as JavaScript objects.
+        if (err) console.log(err);
+        else console.log("Data saved!");
         return res.send({ status: "Success", id: users.length });
     });
-
 })
 
 app.patch('/api/users/:id', (req, res) => {
