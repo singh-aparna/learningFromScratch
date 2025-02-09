@@ -641,8 +641,7 @@ for building robust web applications.-->
                 </h2>
                 <p><b>Promise.all</b> → Resolves when all promises succeed, rejects immediately if any fail.<br />
                     <b>Promise.allSettled</b> → Waits for all promises to settle (either resolve or reject), always
-                    returns an
-                    array of results.<br />
+                    returns an array of results.<br />
                     <b>Promise.race</b> → Resolves or rejects as soon as the first promise settles, ignoring
                     others.<br />
                     <b>Promise.any</b> → Resolves when any one promise succeeds, rejects only if all fail.
@@ -650,8 +649,9 @@ for building robust web applications.-->
             </li>
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2>In which scenarios do error boundaries not catch errors? </h2>
+                <p>Error boundaries do not catch errors inside event handlers, asynchronous code (e.g., setTimeout,
+                    fetch), server-side rendering (SSR), or errors thrown inside the error boundary itself.</p>
             </li>
 
         </ol>
