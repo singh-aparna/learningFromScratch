@@ -590,6 +590,37 @@ for building robust web applications.-->
                 <h2>Polyfills</h2>
                 <p>Polyfills are code snippets that provide the implementation of certain functionality in older
                     JavaScript environments that do not support it natively.
+                    JavaScript polyfills are essential for deep diving into how built-in methods work.<br />
+                    Here’s how to approach writing polyfills like a pro:
+                    🔥 Step-by-Step Guide to Writing Polyfills:<br />
+
+                    ✅ Identify Inputs & Outputs → What arguments does the method take? What should it return?<br />
+                    ✅ Determine Ownership → Is it an Array, Object, Function, or Promise method?<br />
+                    ✅ Understand the Logic → Analyze how the native method works.<br />
+                    ✅ Draft a Skeleton → Structure your function before implementing logic.<br />
+                    ✅ Test Use Cases → Write examples to verify the behavior.<br />
+                    ✅ Write the Full Polyfill → Implement it from scratch.<br />
+                    ✅ Compare with Native Methods → Ensure it matches native functionality.
+                    🏆 Must-Know Polyfills for Frontend Engineers
+                    🔥 Promise-based Polyfills:
+                    🔹 Promise.all
+                    🔹 Promise.allSettled
+                    🔹 Promise.race
+                    🔥 React-like Hooks Polyfills:
+                    🔹 useState
+                    🔹 useEffect
+                    🔹 useMemo
+                    🔹 Redux
+                    🔥 Essential JS Methods:
+                    🔹 Function.bind
+                    🔹 Array.reduce
+                    🔹 Object.freeze & Object.seal
+                    🔹 Debounce & Throttle
+                    🔥 Advanced:
+                    🔹 Custom setInterval (Stop, Resume, Pause)
+                    🔹 Polyfill for new keyword
+                    🔹 Function Memoization (Cache results & optimize performance)
+
                 </p>
             </li>
 
@@ -623,7 +654,7 @@ for building robust web applications.-->
         </div>
     </main>
 
-    <script>
+    <!-- <script>
         //Pagination starts here//
         let currentPage = 1;
         const itemsPerPage = 10; // Show 10 items per page
@@ -651,7 +682,7 @@ for building robust web applications.-->
         }
         showPage(currentPage);
         //Pagination ends here//
-    </script>
+    </script> -->
 
 </body>
 
