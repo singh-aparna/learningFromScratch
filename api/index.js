@@ -21,6 +21,13 @@ app.get('/', (req, res) => {
     //res.send("It's working!");
     res.json({ message: "index.js is working!" })
 })
+
+app.get('/ip', (req,res)=>{
+    const clientIP = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log(clientIP);
+    return res.send(`Request from ${clientIP}`);
+})
+
 //res.json() automatically sets the Content-Type to application/json and converts the response to JSON,
 //while res.send() can send any type of response (string, object, buffer, etc.).
 
