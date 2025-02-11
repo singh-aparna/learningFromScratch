@@ -1,13 +1,9 @@
 import './App.css';
-import { useEffect, useState } from "react";
+import AutoCompleteSearchBar from './pages/AutoCompleteSearchBar';
 
 function App() {
-  const [input, setInput] = useState('');
-  return (
-    <main>
-      
-    </main>
-  );
+  return (<div>
+    <AutoCompleteSearchBar />
+  </div>)
 }
-
 export default App;

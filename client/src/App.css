@@ -3,7 +3,7 @@ body {
 
 }
 
-main{
+main {
   max-width: 500px;
   margin: 10px auto;
   background-color: #f0f0f0;
@@ -11,11 +11,32 @@ main{
   border-radius: 5px;
 }
 
-input{
+input {
   display: block;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+.recipe-result {
+  max-width: 500px;
+  background-color: #fff;
+  margin: 10px auto;
+  padding: 8px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.recipe-list {
+  padding: 4px;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: left;
+}
+
+.recipe-list:hover{
+ background-color: #f0f0f0;
+ cursor: pointer;
 }
