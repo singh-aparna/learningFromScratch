@@ -8,7 +8,7 @@ export default function AutoCompleteSearchBar() {
     const fetchData = async () => {
         if (cache[input]) {
             console.log("Cache retuned", input);
-            setRecipes(cache[input])
+            setRecipes(cache[input]);
             return;
         }
         console.log("API call", input);
@@ -16,7 +16,7 @@ export default function AutoCompleteSearchBar() {
         const json = await data.json();
         // console.log(json.recipes);
         setRecipes(json?.recipes);
-        setCache(prev => ({ ...prev, [input]: json?.recipes }));
+        setCache((prev) => ({ ...prev, [input]: json?.recipes }));
     }
 
     useEffect(() => {
