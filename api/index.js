@@ -3,12 +3,19 @@ const users = require('./MOCK_DATA.json');
 const fs = require('fs');
 //CommonJS (require/module.exports) is used in Node.js for synchronous module loading
 const app = express();
+const cors = require('cors');
+
 app.use(express.urlencoded({ extended: false }));
 //This middleware parses incoming URL - encoded form data(e.g.,
 //from an HTML form with application/x-www-form-urlencoded content type) and makes it available in req.body.
 // When to use false vs. true?
 // Use false (default) if you expect simple key-value pairs in forms.
 // Use true if you need to handle complex/nested data (e.g., objects, arrays).
+
+app.use(cors(
+    {
+    origin:"http://localhost:3000"
+}));
 
 //custom middleware
 app.use((req, res, next) => {
@@ -20,6 +27,10 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     //res.send("It's working!");
     res.json({ message: "index.js is working!" })
+})
+
+app.get('/recipies', (req, res)=>{
+    res.send(res);
 })
 
 app.get('/ip', (req,res)=>{
@@ -84,10 +95,6 @@ app.delete('/api/users/:id', (req, res) => {
         return res.json({ status: "success" });
     })
 })
-
-
-
-
 
 app.listen(4000, () => {
     console.log("Server is listenning on PORT 4000!");
