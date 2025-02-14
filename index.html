@@ -1027,7 +1027,7 @@ for building robust web applications.-->
                     Examples of Bundlers:<br />
                     Webpack<br />
                     Vite<br />
-                    Parcel<br/>
+                    Parcel<br />
                     NOTE: In create-react-app, the bundler used is webpack.
                 </p>
             </li>
@@ -1036,15 +1036,15 @@ for building robust web applications.-->
             <li>
                 <h2>Package Manager</h2>
                 <p>Bundlers are packages. If we want to use a package in our
-                    code, we have to use a package manager.<br/>
+                    code, we have to use a package manager.<br />
                     We use a package manager known as npm or yarn</p>
             </li>
 
             <li>
                 <h2>npm init</h2>
-                <p>It creates a package.json file.<br/>
-                    Now to install parcel we will do:<br/>
-                    npm install -D parcel<br/>
+                <p>It creates a package.json file.<br />
+                    Now to install parcel we will do:<br />
+                    npm install -D parcel<br />
                     Now we will get a package-lock.json file.</p>
             </li>
 
@@ -1052,12 +1052,122 @@ for building robust web applications.-->
                 <h2>package.json</h2>
                 <p>Package.json file is a configuration for NPM. Whatever
                     packages our project needs, we install those packages using
-                    npm install <packageName>.<br/>
-                    Once package installation is complete, their versions and
-                    configuration related information is stored as dependencies
-                    inside package.json file.</p>
+                    npm install <packageName>.<br />
+                        Once package installation is complete, their versions and
+                        configuration related information is stored as dependencies
+                        inside package.json file.</p>
             </li>
         </ol>
+
+        <li>
+            <h1>package-lock.json</h1>
+            <p>Package-lock.json locks the exact version of packages being
+                used in the project.</p>
+        </li>
+
+
+        <li>
+            <h1>What is difference between package.json and
+                package.lock.json?
+            </h1>
+            <p>In package. json we have information about generic version
+                of installed packages whereas in package.lock.json we have
+                information about the specific or exact version of
+                installed packages.</p>
+        </li>
+
+
+        <li>
+            <h1>node_modules</h1>
+            <p>Which gets installed is like a database for the npm.<br />
+                Every dependency in node_module will have its package.json.<br />
+                Node modules are very heavy so we should always put this in
+                git ignore.</p>
+        </li>
+
+
+        <li>
+            <h1>npx parcel index.html</h1>
+            <p>npx means ‘execute using npm’
+                index.html is the entry point
+            </p>
+        </li>
+
+        <li>
+            <h1>Hot Module Replacement (HMR)</h1>
+            <p>It means that parcel will keep a track of all the files which
+                you are updating.<br />
+                There is File Watcher Algorithm (written in C++). It keeps
+                track of all the files which are changing realtime and it
+                tells the server to reload.<br />
+                These are all done by PARCEL
+            </p>
+        </li>
+
+        <li>
+            <h1>parcel-cache</h1>
+            <p>Parcel caches code all the time.<br />
+                When we run the application, a build is created which takes
+                some time in ms.<br />
+                If we make any code changes and save the application, another
+                build will be triggered which might take even less time than
+                the previous build.<br />
+                This reduction of time is due to parcel cache.<br />
+                Parcel immediately loads the code from the cache every time
+                there is a subsequent build.<br />
+                On the very first build parcel creates a folder .parcelcache where it stores the caches in binary
+                codeformat.
+                Parcel gives faster build, faster developer experience
+                because of caching.</p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
+
+
+        <li>
+            <h1></h1>
+            <p></p>
+        </li>
 
         <div class="pagination">
             <button onclick="prevPage()">Previous</button>
