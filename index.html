@@ -1277,54 +1277,88 @@ for building robust web applications.-->
 
             <li>
                 <h2> What is a React Functional Components?</h2>
-                <p>It is just a JavaScript Function that returns some JSX or a 
+                <p>It is just a JavaScript Function that returns some JSX or a
                     react element.</p>
             </li>
 
 
             <li>
                 <h2> Advantages of using JSX.</h2>
-                <p>JSX prevents code injections (attacks)<br/>
-                    JSX makes it easier to write code as we are no longer creating 
-                    elements using React.createElement()<br/><br/>
-                    If someone gets access to your JS code and sends some malicious 
-                    data which will then get displayed on the screen, that attack is 
-                    called cross-site scripting. 
-                    It can read cookies, local storage, session storage, get 
-                    cookies, get info about your device, and read data. JSx takes 
+                <p>JSX prevents code injections (attacks)<br />
+                    JSX makes it easier to write code as we are no longer creating
+                    elements using React.createElement()<br /><br />
+                    If someone gets access to your JS code and sends some malicious
+                    data which will then get displayed on the screen, that attack is
+                    called cross-site scripting.
+                    It can read cookies, local storage, session storage, get
+                    cookies, get info about your device, and read data. JSx takes
                     care of your data.
-                     If some API passes some malicious data JSX will escape it. It 
-                    prevents cross-site scripting and sanitizes the data before 
+                    If some API passes some malicious data JSX will escape it. It
+                    prevents cross-site scripting and sanitizes the data before
                     rendering
                 </p>
             </li>
 
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2>Config Driven UI.</h2>
+                <p>It is a user Interface that is built and configured using a
+                    declaration configuration file or data structure, rather than
+                    being hardcoded.<br />
+                    Config is the data coming from the api which keeps on changing
+                    according to different factors like user, location, etc. </p>
             </li>
 
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2> Why do we use React? Some of us might wonder why we don't
+                    just stick to HTML, CSS, and JAVASCRIPT for everything we've
+                    been doing?</h2>
+                <p> Of course! It's absolutely possible to accomplish
+                    everything using regular HTML, CSS and JAVASCRIPT without
+                    using REACT. However, we chose React because it enhances
+                    our developer experience, making it more seamless and
+                    efficient.</p>
             </li>
 
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2>Note</h2>
+                <p> 📢
+                    NOTE: - The crucial point about State variables is that
+                    whenever they update, React triggers a reconciliation
+                    cycle and re-renders the component. - This means that as soon as the data layer changes,
+                    React promptly updates the UI layer. The data layer is
+                    always kept in sync with the UI layer. - To achieve this rapid operation, React employs a
+                    reconciliation algorithm, also known as the diffing
+                    algorithm or React-Fibre which we will delve into further
+                    below.</p>
             </li>
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2> What are ‘Monolithic’ and ‘Microservices’ architectures exactly?</h2>
+                <p>
+                    Understanding ‘Monolith’ and ‘Microservices’ architectures is a big deal in
+                    software development, but as developers, it's important to grasp the basics. So,
+                    in this episode, we'll break it down into simple terms.<br />
+                    In the past, we used to build large projects where everything was bundled
+                    together. Imagine building an entire application where all the code—APIs, user
+                    interface, database connections, authentication, even notification services—
+                    resides in one massive project with single code base.<br /><br />
+                    The idea is to split your application into a set of smaller, interconnected
+                    services instead of building a single monolithic application. Each service handles
+                    a specific job, like handling user accounts or managing payments. Inside each
+                    service, there's a mini-world of its own, with its own set of rules (business
+                    logic) and tools (adapters). Some services talk to each other in different ways,
+                    like using REST or messaging. Others might even have their own website!
+                </p>
             </li>
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2> Why Microservices?</h2>
+                <p> Breaking things down into microservices helps us work faster and smarter. We
+                    can update or replace each piece without causing a fuss. It's like having a well
+                    oiled machine where each part does its job perfectly.</p>
             </li>
 
             <li>
