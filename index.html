@@ -1088,8 +1088,17 @@ for building robust web applications.-->
             <li>
                 <h2>npx parcel index.html</h2>
                 <p>npx means ‘execute using npm’
-                    index.html is the entry point
+                    index.html is the entry point.<br />
+                    This will create a faster development version of our project
+                    and serves it on the server.<br />
                 </p>
+            </li>
+
+            <li>
+                <h2>npx parcel build index.html</h2>
+                <p>It creates a lot of things, minify your file.<br />
+                    And the parcel will build all the production files to
+                    the dist folder.</p>
             </li>
 
             <li>
@@ -1163,7 +1172,7 @@ for building robust web applications.-->
                     <b>"browserslist":["last 2 versions"]</b><br />
                     support 74% all browsers<br />
                     This means my parcel will make sure that my app works in last 2 version of all the browsers
-                    avialable.
+                    avilable.
                 </p>
             </li>
 
@@ -1172,13 +1181,21 @@ for building robust web applications.-->
                 <p> Tree shaking is a process of removing the unwanted code that
                     we do not use while developing the application.<br />
                     In computing, tree shaking is a dead code elimination
-                    technique that is applied when optimizing code
+                    technique that is applied when optimizing code.
                 </p>
             </li>
 
             <li>
-                <h2></h2>
-                <p></p>
+                <h2>dist:</h2>
+                <p>It keeps the files minified for us.<br />
+                    When bundler builds the app, the build goes into a folder
+                    called dist.<br />
+                    The `/dist` folder contains the minimized and optimised
+                    version the source code.<br />
+                    Along with the minified code, the /dist folder also comprises
+                    of all the compiled modules that may or may not be used with
+                    other systems.
+                </p>
             </li>
 
             <li>
