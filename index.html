@@ -1057,124 +1057,147 @@ for building robust web applications.-->
                         configuration related information is stored as dependencies
                         inside package.json file.</p>
             </li>
+
+            <li>
+                <h2>package-lock.json</h2>
+                <p>Package-lock.json locks the exact version of packages being
+                    used in the project.</p>
+            </li>
+    
+    
+            <li>
+                <h2>What is difference between package.json and
+                    package.lock.json?
+                </h2>
+                <p>In package. json we have information about generic version
+                    of installed packages whereas in package.lock.json we have
+                    information about the specific or exact version of
+                    installed packages.</p>
+            </li>
+    
+2
+            <li>
+                <h2>node_modules</h2>
+                <p>Which gets installed is like a database for the npm.<br />
+                    Every dependency in node_module will have its package.json.<br />
+                    Node modules are very heavy so we should always put this in
+                    git ignore.</p>
+            </li>
+    
+    
+            <li>
+                <h2>npx parcel index.html</h2>
+                <p>npx means ‘execute using npm’
+                    index.html is the entry point
+                </p>
+            </li>
+    
+            <li>
+                <h2>Hot Module Replacement (HMR)</h2>
+                <p>It means that parcel will keep a track of all the files which
+                    you are updating.<br />
+                    There is File Watcher Algorithm (written in C++). It keeps
+                    track of all the files which are changing realtime and it
+                    tells the server to reload.<br />
+                    These are all done by PARCEL
+                </p>
+            </li>
+    
+            <li>
+                <h2>parcel-cache</h2>
+                <p>Parcel caches code all the time.<br />
+                    When we run the application, a build is created which takes
+                    some time in ms.<br />
+                    If we make any code changes and save the application, another
+                    build will be triggered which might take even less time than
+                    the previous build.<br />
+                    This reduction of time is due to parcel cache.<br />
+                    Parcel immediately loads the code from the cache every time
+                    there is a subsequent build.<br />
+                    On the very first build parcel creates a folder .parcelcache where it stores the caches in binary
+                    codeformat.
+                    Parcel gives faster build, faster developer experience
+                    because of caching.</p>
+            </li>
+    
+            <li>
+                <h2>Transitive Dependencies</h2>
+                <p>We have our package manager which takes care of our
+                    transitive dependencies of our code.<br />
+                    If we’ve to build a production ready app which uses all
+                    optimisations (like minify, bundling, compression, etc), we
+                    need to do all these.<br />
+                    But we can’t do this alone, we need some dependencies on it.
+                    Those dependencies are also dependent on other dependencies.</p>
+            </li>
+    
+            <li>
+                <h2>Parcel feature at a glance</h2>
+                <p>
+                    Hot Module Replacement (HMR)<br/>
+                    File Watcher Algorithm - C++<br/>
+                    Bundling<br/>
+                    Minify Code<br/>
+                    Cleaning our code<br/>
+                    Dev and production build<br/>
+                    Super fast build algorithm<br/>
+                    Image Optimization<br/>
+                    Caching while development<br/>
+                    Compression<br/>
+                    Compatible with older browser versions<br/>
+                    Https on dev<br/>
+                    Image Optimization<br/>
+                    Port No<br/>
+                    Consistency Hashing Algorithm<br/>
+                    Zero Config<br/>
+                    Tree Shaking
+                </p>
+            </li>
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+    
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+    
+
+
+
         </ol>
 
-        <li>
-            <h1>package-lock.json</h1>
-            <p>Package-lock.json locks the exact version of packages being
-                used in the project.</p>
-        </li>
-
-
-        <li>
-            <h1>What is difference between package.json and
-                package.lock.json?
-            </h1>
-            <p>In package. json we have information about generic version
-                of installed packages whereas in package.lock.json we have
-                information about the specific or exact version of
-                installed packages.</p>
-        </li>
-
-
-        <li>
-            <h1>node_modules</h1>
-            <p>Which gets installed is like a database for the npm.<br />
-                Every dependency in node_module will have its package.json.<br />
-                Node modules are very heavy so we should always put this in
-                git ignore.</p>
-        </li>
-
-
-        <li>
-            <h1>npx parcel index.html</h1>
-            <p>npx means ‘execute using npm’
-                index.html is the entry point
-            </p>
-        </li>
-
-        <li>
-            <h1>Hot Module Replacement (HMR)</h1>
-            <p>It means that parcel will keep a track of all the files which
-                you are updating.<br />
-                There is File Watcher Algorithm (written in C++). It keeps
-                track of all the files which are changing realtime and it
-                tells the server to reload.<br />
-                These are all done by PARCEL
-            </p>
-        </li>
-
-        <li>
-            <h1>parcel-cache</h1>
-            <p>Parcel caches code all the time.<br />
-                When we run the application, a build is created which takes
-                some time in ms.<br />
-                If we make any code changes and save the application, another
-                build will be triggered which might take even less time than
-                the previous build.<br />
-                This reduction of time is due to parcel cache.<br />
-                Parcel immediately loads the code from the cache every time
-                there is a subsequent build.<br />
-                On the very first build parcel creates a folder .parcelcache where it stores the caches in binary
-                codeformat.
-                Parcel gives faster build, faster developer experience
-                because of caching.</p>
-        </li>
-
-        <li>
-            <h1>Transitive Dependencies</h1>
-            <p>We have our package manager which takes care of our
-                transitive dependencies of our code.<br />
-                If we’ve to build a production ready app which uses all
-                optimisations (like minify, bundling, compression, etc), we
-                need to do all these.<br />
-                But we can’t do this alone, we need some dependencies on it.
-                Those dependencies are also dependent on other dependencies.</p>
-        </li>
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
-
-        <li>
-            <h1></h1>
-            <p></p>
-        </li>
-
+        
         <div class="pagination">
             <button onclick="prevPage()">Previous</button>
             <span id="page-number">Page 1</span>
