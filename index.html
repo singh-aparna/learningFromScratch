@@ -1015,15 +1015,15 @@ for building robust web applications.-->
                 <h2>To make our app production ready what should we do?</h2>
                 <p>Minify our file (Remove console logs, bundle things up)
                     Need a server to run things.<br />
-                    📢 NOTE: Minify —> Optimization —>Clean console —> Bundle
+                    <b>📢 NOTE: Minify —> Optimization —>Clean console —> Bundle</b>
                 </p>
             </li>
 
 
             <li>
                 <h2>Bundlers</h2>
-                <p>A bundler is a tool that bundles our app, packages our app so
-                    that it can be shipped to production.<br />
+                <p>A bundler is a tool that <b>bundles our app, packages our app so
+                        that it can be shipped to production.</b><br />
                     Examples of Bundlers:<br />
                     Webpack<br />
                     Vite<br />
@@ -1069,19 +1069,19 @@ for building robust web applications.-->
                 <h2>What is difference between package.json and
                     package.lock.json?
                 </h2>
-                <p>In package. json we have information about generic version
+                <p>In package. json we have information about <b>generic version</b>
                     of installed packages whereas in package.lock.json we have
                     information about the specific or exact version of
                     installed packages.</p>
             </li>
 
-            2
+
             <li>
                 <h2>node_modules</h2>
                 <p>Which gets installed is like a database for the npm.<br />
                     Every dependency in node_module will have its package.json.<br />
                     Node modules are very heavy so we should always put this in
-                    git ignore.</p>
+                    gitignore.</p>
             </li>
 
 
@@ -1105,8 +1105,9 @@ for building robust web applications.-->
                 <h2>Hot Module Replacement (HMR)</h2>
                 <p>It means that parcel will keep a track of all the files which
                     you are updating.<br />
-                    There is File Watcher Algorithm (written in C++). It keeps
-                    track of all the files which are changing realtime and it
+                    There is File Watcher Algorithm (written in C++).<br />
+                    <b>It keeps
+                        track of all the files which are changing realtime</b> and it
                     tells the server to reload.<br />
                     These are all done by PARCEL
                 </p>
@@ -1124,9 +1125,9 @@ for building robust web applications.-->
                     Parcel immediately loads the code from the cache every time
                     there is a subsequent build.<br />
                     On the very first build parcel creates a folder .parcelcache where it stores the caches in binary
-                    codeformat.
-                    Parcel gives faster build, faster developer experience
-                    because of caching.</p>
+                    codeformat.<br />
+                    Parcel gives <b>faster build, faster developer experience
+                        because of caching.</b></p>
             </li>
 
             <li>
@@ -1143,7 +1144,7 @@ for building robust web applications.-->
             <li>
                 <h2>Parcel feature at a glance</h2>
                 <p>
-                    - Hot Module Replacement (HMR)<br />
+                    - <b>Hot Module Replacement (HMR)</b><br />
                     - File Watcher Algorithm - C++<br />
                     - Bundling<br />
                     - Minify Code<br />
@@ -1159,7 +1160,7 @@ for building robust web applications.-->
                     - Port No<br />
                     - Consistency Hashing Algorithm<br />
                     - Zero Config<br />
-                    - Tree Shaking
+                    - <b>Tree Shaking</b>
                 </p>
             </li>
 
@@ -1178,7 +1179,7 @@ for building robust web applications.-->
 
             <li>
                 <h2> Tree Shaking:</h2>
-                <p> Tree shaking is a process of removing the unwanted code that
+                <p> Tree shaking is a <b>process of removing the unwanted code</b> that
                     we do not use while developing the application.<br />
                     In computing, tree shaking is a dead code elimination
                     technique that is applied when optimizing code.
@@ -1190,8 +1191,8 @@ for building robust web applications.-->
                 <p>It keeps the files minified for us.<br />
                     When bundler builds the app, the build goes into a folder
                     called dist.<br />
-                    The `/dist` folder contains the minimized and optimised
-                    version the source code.<br />
+                    The `/dist` folder contains the <b>minimized and optimised
+                        version the source code.</b><br />
                     Along with the minified code, the /dist folder also comprises
                     of all the compiled modules that may or may not be used with
                     other systems.
@@ -1199,6 +1200,88 @@ for building robust web applications.-->
             </li>
 
             <li>
+                <h2>JSX</h2>
+                <p>We used React.createElement() for displaying content
+                    on the webpage but its syntax is very bad. It’s not developer
+                    friendly, and very hard to read. To solve this problem Facebook
+                    developers built JSX.<br />
+                    JSX makes developer life easy as we no longer have to write our
+                    code using React.createElement()<br />
+                </p>
+            </li>
+
+
+            <li>
+                <h2>What is JSX?</h2>
+                <p>JSX is <b>HTML-like or XML-like syntax</b>. JSX stands for JavaScript
+                    XML. It's a syntax extension for JavaScript.<br />
+                    It is not a part of React. React apps can be built even
+                    without JSX but the code will become very hard to read.<br />
+                    It is not HTML inside JavaScript.<br />
+                    JavaScript engine cannot understand JSX as it only
+                    understands ECMAScript.
+                </p>
+            </li>
+
+
+            <li>
+                <h2> Is JSX a valid JavaScript?</h2>
+                <p>JSX is not a valid Javascript syntax as it’s not pure HTML or
+                    pure JavaScript for a browser to understand. JS does not have
+                    built-in JSX. The JS engine does not understand JSX because
+                    the <b>JS engine understands ECMAScript or ES6+ code.</b></p>
+            </li>
+
+
+            <li>
+                <h2> If the browser can’t understand JSX how is it still working?</h2>
+                <p>This is because of Parcel because “Parcel is a Beast”.<br />
+                    Before the code gets to JS Engine it is sent to Parcel and
+                    Transpiled there. Then after transpilation, the browser gets the
+                    code that it can understand.<br />
+                    Transpilation
+                    ⇒
+                    Converting the code in such a format that the
+                    browsers can understand.<br />
+                    Parcel is like a manager who gives the responsibility of
+                    transpilation to a package called Babel.<br /><br />
+                    Babel is a package that is a compiler/transpiler of JavaScript
+                    that is already present inside ‘node-modules’. It takes JSX and
+                    converts it into the code that browsers understand, as soon as
+                    we write it and save the file. It is not created by Facebook. <br /><br />
+                    <b>
+                        JSX (transpiled by Babel)
+                        ⇒
+                        React.createElement
+                        ⇒
+                        ReactElement
+                        ⇒
+                        JS Object
+                        ⇒
+                        HTML Element(render)
+                    </b>
+
+                </p>
+            </li>
+
+            <li>
+                <h2> What is the difference between HTML and JSX?</h2>
+                <p>JSX is not HTML. It’s HTML-like syntax.<br />
+                    HTML uses ‘class’ property whereas JSX uses ‘className’
+                    property.<br />
+                    HTML can use hypens in property names whereas JSX uses
+                    camelCase syntax.
+                </p>
+            </li>
+
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+
+            <li>
                 <h2></h2>
                 <p></p>
             </li>
@@ -1215,6 +1298,52 @@ for building robust web applications.-->
                 <p></p>
             </li>
 
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
+
+            <li>
+                <h2></h2>
+                <p></p>
+            </li>
 
             <li>
                 <h2></h2>
